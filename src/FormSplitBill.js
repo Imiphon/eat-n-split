@@ -81,8 +81,12 @@ export default function FormSplitBill({ selectedFriend, onSplitBill }) {
           <option value="$">$</option>
         </select>
       </div>
-
-      <label>💰 {selectedFriend?.name}'s part</label>
+      
+      <label style={{
+        display: "inline-flex",
+        alignItems: "center",
+        gap: "8px"
+      }}> <img src={selectedFriend.image} alt={selectedFriend.nam} style={{width: "2em"}}></img>{selectedFriend?.name}'s part</label>
       <input type="text" value={friendsBillPart || ""} disabled />
 
       <label>💰 You give</label>
