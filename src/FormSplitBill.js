@@ -59,7 +59,7 @@ export default function FormSplitBill({ selectedFriend, onSplitBill }) {
         onChange={(e) => handleBillChange(e.target.value)}
       />
 
-      <label>💰 My part of the bill</label>
+      <label>💰 Your part of the bill</label>
       <div style={{ display: "flex", gap: "10px" }}>
         <input
           type="text"
@@ -86,7 +86,7 @@ export default function FormSplitBill({ selectedFriend, onSplitBill }) {
         display: "inline-flex",
         alignItems: "center",
         gap: "8px"
-      }}> <img src={selectedFriend.image} alt={selectedFriend.nam} style={{width: "2em"}}></img>{selectedFriend?.name}'s part</label>
+      }}> <img src={selectedFriend.image} alt={selectedFriend.nam} style={{width: "2em", borderRadius:"50%"}}></img>{selectedFriend?.name}'s part</label>
       <input type="text" value={friendsBillPart || ""} disabled />
 
       <label>💰 You give</label>
